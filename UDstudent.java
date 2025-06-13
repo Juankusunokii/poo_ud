@@ -29,10 +29,11 @@ public class UDstudent extends estudiante {
     }
 
 }
+
 public class Engine {
     public Integer cC;
-    public Integer Price;
-    public Integer Weight = 200;
+    public Integer price;
+    public Integer weight = 200;
 
     public Integer calculatedPrice(){
         
@@ -48,34 +49,35 @@ public class Engine {
         else {
             System.out.println("Pregunte por su preferencia");
         }
-        return this.Price;
+        return this.price;
     }
 
-    public Integer calculatedWeight(){
+    public Integer calculatedweight(){
          
         if ( this.cC < 1600 && this.cC > 1200){
             this.weight += 15;
         }
         else if (cC < 1200){
-            this.Weight += 12; 
+            this.weight += 12; 
         }
         else if (cC > 1600){
-            this.Weight = 20;
+            this.weight = 20;
         }
-        return this.Weight;
+        return this.weight;
     }
 }
 public class Chassis {
 
     public String type;
     public Integer price;
-
-
+    
+    public chassis(){
+    }
     public Integer calculatePrice(){
-        if (this.type == "deportivo"){
+        if (this.type.equals("Deportivo")){
             this.price += 5000000;
         }
-        else if (this.type == "classic"){
+        else if (this.type.equals("Classic")){
             this.price += 1000000;
         }
         return this.price;
@@ -84,20 +86,31 @@ public class Chassis {
 }
 import Chassis;
 import Engine;
+import java.util.List;
 
 
 public class Car{
 
+    private List<Car>cars=null;
     public String color;
+    public Integer price;
+    Chassis chassis = new Chassis;
+    
+    public static void main(String[] args) {
+        
 
+    }
+    public Car(){
+    }
     private void calcualatedPrice(){
 
     }
     
-    public string toString(){
+    public String toString(){
 
     }
 }
+
 import Car;
 import util.java.Scanner;
 
@@ -112,3 +125,4 @@ public class Catalog {
     
     
 }
+
